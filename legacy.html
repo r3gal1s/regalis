@@ -2,97 +2,151 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>legacy</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>legacy – regalis</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet" />
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
+      margin: 0;
+      padding: 4.5rem 1.5rem;
       background-color: #fdfcfb;
       color: #1a1a1a;
       font-family: 'Inter', sans-serif;
-      max-width: 700px;
-      margin: 4rem auto;
-      padding: 0 1rem;
-      line-height: 1.6;
+      line-height: 1.75;
     }
 
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .entry {
-      margin-bottom: 2.5rem;
-    }
-
-    .entry h2 {
-      font-size: 1.3rem;
-      margin-bottom: 0.2rem;
-    }
-
-    .entry p {
-      font-size: 0.95rem;
-      color: #666;
-      margin: 0;
-    }
-
-    a {
-      text-decoration: none;
-      color: #b4a89f;
-      font-weight: 500;
-    }
-
-    a:hover {
-      color: #8b7e77;
+    main {
+      max-width: 760px;
+      margin: 0 auto;
     }
 
     .back-link {
-      display: block;
-      margin-bottom: 2rem;
+      display: inline-block;
+      margin-bottom: 2.5rem;
+      color: #6b635c;
       font-size: 0.95rem;
-      color: #8b7e77;
+      text-decoration: none;
+      transition: color 0.25s ease;
     }
 
     .back-link:hover {
-      text-decoration: underline;
+      color: #a2938b;
+    }
+
+    h1 {
+      margin: 0 0 0.8rem;
+      color: #2e2e2e;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.1rem, 6vw, 2.65rem);
+      font-weight: 500;
+      line-height: 1.15;
+      text-align: center;
+    }
+
+    .subhead {
+      max-width: 520px;
+      margin: 0 auto 3.2rem;
+      color: #8a817b;
+      font-size: 0.98rem;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .entries {
+      margin-top: 1rem;
+    }
+
+    .entry {
+      margin-bottom: 2.15rem;
+    }
+
+    .entry h2 {
+      margin: 0 0 0.35rem;
+      font-size: 1.12rem;
+      font-weight: 400;
+      line-height: 1.45;
+    }
+
+    .entry a {
+      color: #4f4740;
+      text-decoration: none;
+      transition: color 0.25s ease;
+    }
+
+    .entry a:hover {
+      color: #a2938b;
+    }
+
+    .entry p {
+      margin: 0;
+      color: #999;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
     }
 
     footer {
-      text-align: center;
       margin-top: 5rem;
+      color: #999;
       font-size: 0.9rem;
-      color: #777;
+      font-style: italic;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 3.5rem 1.2rem;
+      }
+
+      .subhead {
+        margin-bottom: 2.5rem;
+      }
+
+      .entry {
+        margin-bottom: 1.8rem;
+      }
     }
   </style>
 </head>
+
 <body>
+  <main>
+    <a class="back-link" href="index.html">← back to home</a>
 
-  <a class="back-link" href="index.html">← back to home</a>
+    <h1>legacy</h1>
+    <p class="subhead">what I make will outlive me.</p>
 
-  <h1>what I make will outlive me.</h1>
+    <section class="entries">
+      <div class="entry">
+        <h2><a href="post6-what-they-will-call-me.html">What They Will Call Me</a></h2>
+        <p>May 30, 2025</p>
+      </div>
 
-  <div class="entry">
-    <h2><a href="post6-what-they-will-call-me.html">What They Will Call Me</a></h2>
-    <p>May 30, 2025</p>
-  </div>
+      <div class="entry">
+        <h2><a href="post7-the-home-we-built.html">The Home We Built</a></h2>
+        <p>May 30, 2025</p>
+      </div>
 
-  <div class="entry">
-    <h2><a href="post7-the-home-we-built.html">The Home We Built</a></h2>
-    <p>May 30, 2025</p>
-  </div>
+      <div class="entry">
+        <h2><a href="post8-grief-but-in-red-lipstick.html">Grief, but in Red Lipstick</a></h2>
+        <p>May 30, 2025</p>
+      </div>
 
-  <div class="entry">
-    <h2><a href="post8-grief-but-in-red-lipstick.html">Grief, but in Red Lipstick</a></h2>
-    <p>May 30, 2025</p>
-  </div>
+      <div class="entry">
+        <h2><a href="post9-i-was-him-if-everything-was-different.html">I Was Him, If Everything Had Been Different</a></h2>
+        <p>May 30, 2025</p>
+      </div>
+    </section>
 
-  <div class="entry">
-    <h2><a href="post9-i-was-him-if-everything-was-different.html">I Was Him, If Everything Had Been Different</a></h2>
-    <p>May 30, 2025</p>
-  </div>
-
-  <footer>© 2025 by regalis</footer>
+    <footer>© 2025 by regalis</footer>
+  </main>
 </body>
 </html>
