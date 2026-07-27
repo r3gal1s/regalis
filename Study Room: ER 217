@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="A reflection on studying for the MCAT beside my grandmother's hospital bed, and what caregiving taught me about medicine."
+  />
+
+  <title>Study Room: ER 217 – regalis</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --background: #f5f8fc;
+      --paper: #ffffff;
+      --text: #2f3b47;
+      --muted: #6c7d8d;
+      --accent: #6388b8;
+      --accent-dark: #3f5f86;
+      --line: #d7e2ec;
+      --soft-accent: #edf4fb;
+      --slate: #526170;
+      --shadow: rgba(33, 55, 77, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 5rem 1.5rem 4rem;
+
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0.92),
+          rgba(245, 248, 252, 0.94)
+        ),
+        var(--background);
+
+      color: var(--text);
+      font-family: "Newsreader", Georgia, serif;
+      font-size: 1.16rem;
+      line-height: 1.82;
+      letter-spacing: 0.005em;
+    }
+
+    header {
+      margin-bottom: 4.5rem;
+      text-align: center;
+    }
+
+    .category {
+      margin: 0 0 1.1rem;
+
+      color: var(--accent);
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: 0.74rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 680px;
+      margin: 0 auto 1.35rem;
+
+      color: var(--accent-dark);
+      font-family: "Newsreader", Georgia, serif;
+      font-size: clamp(2.75rem, 8vw, 4.7rem);
+      font-weight: 500;
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+    }
+
+    .subtitle {
+      max-width: 540px;
+      margin: 0 auto;
+
+      color: var(--muted);
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: 0.91rem;
+      line-height: 1.65;
+    }
+
+    article {
+      padding: clamp(1.5rem, 5vw, 4rem);
+
+      background: rgba(255, 255, 255, 0.97);
+      border: 1px solid #dce6ef;
+      border-radius: 3px;
+      box-shadow: 0 20px 60px rgba(45, 67, 89, 0.055);
+    }
+
+    p {
+      margin: 0 0 1.55rem;
+    }
+
+    blockquote {
+      margin: 2.8rem 0;
+      padding: 1.45rem 1.7rem;
+
+      background-color: var(--soft-accent);
+      border-left: 4px solid var(--accent);
+
+      color: #46627f;
+      font-size: 1.28rem;
+      font-style: italic;
+      line-height: 1.65;
+    }
+
+    blockquote p {
+      margin: 0;
+    }
+
+    .standalone {
+      margin: 2.45rem 0;
+
+      color: var(--accent-dark);
+      font-size: 1.28rem;
+      font-weight: 500;
+      line-height: 1.65;
+    }
+
+    .rhythm {
+      margin: 2.8rem 0;
+      padding: 1.75rem 1.8rem;
+
+      background-color: #f8fbff;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+
+      color: var(--slate);
+      font-size: 1.21rem;
+      line-height: 1.78;
+    }
+
+    .rhythm p {
+      margin-bottom: 0.55rem;
+    }
+
+    .rhythm p:last-child {
+      margin-bottom: 0;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.85rem;
+
+      margin: 4rem 0;
+
+      color: var(--accent);
+    }
+
+    .divider::before,
+    .divider::after {
+      width: 44px;
+      height: 1px;
+
+      background-color: var(--line);
+      content: "";
+    }
+
+    .divider span {
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+    }
+
+    .ending {
+      margin-top: 3.8rem;
+      padding-top: 2.2rem;
+
+      border-top: 1px solid var(--line);
+
+      color: #344352;
+      font-size: 1.27rem;
+      line-height: 1.72;
+    }
+
+    .ending p:last-child {
+      margin-bottom: 0;
+      color: var(--accent-dark);
+      font-weight: 500;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 3rem;
+
+      color: var(--accent);
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      color: var(--accent-dark);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 3.5rem 1rem 2.5rem;
+        font-size: 1.08rem;
+      }
+
+      header {
+        margin-bottom: 3rem;
+      }
+
+      article {
+        padding: 1.7rem 1.25rem;
+      }
+
+      blockquote {
+        margin: 2.2rem 0;
+        padding: 1.25rem;
+        font-size: 1.17rem;
+      }
+
+      .rhythm {
+        padding: 1.4rem 1.2rem;
+        font-size: 1.13rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <p class="category">Lingerings</p>
+
+    <h1>Study Room: ER 217</h1>
+
+    <p class="subtitle">
+      On borrowed time, bedside care, and studying medicine from the family chair.
+    </p>
+  </header>
+
+  <article>
+
+    <p>I was studying for the MCAT in my grandmother’s hospital room during her second emergency room visit that month and her sixth that year when a thought crossed my mind.</p>
+
+    <blockquote>
+      <p>Does it count as a Pomodoro break if every thirty minutes I have to get up and empty my grandmother’s commode?</p>
+    </blockquote>
+
+    <p>I laughed to myself. It was an awful thought.</p>
+
+    <p>It was also exactly how I cope.</p>
+
+    <p>When life becomes overwhelming, my instinct is to find the absurdity before the sadness catches up. My friends know this about me. They’ll listen as I begin a story with, “So my grandmother was hospitalized again…” and somehow end up laughing before catching themselves, their smiles fading into guilty expressions. I never mind. For a moment, they’ve seen what I see: that sometimes the most heartbreaking moments are also strangely, impossibly funny. Humor has never made difficult moments hurt less. It simply gives me enough room to keep moving through them.</p>
+
+    <p>After the third interruption, I turned the timer off. The commode was keeping better time than the app anyway.</p>
+
+    <p class="standalone">The room settled into a rhythm no productivity method could compete with.</p>
+
+    <div class="rhythm">
+      <p>Read a page.</p>
+
+      <p>The heart monitor chirped. Look up. She was awake. Close the Kaplan book. Stand. Empty the commode. Wash my hands. Straighten the blankets she had kicked down without realizing it.</p>
+
+      <p>Lift the paper cup so she could take two careful sips of water, her hands too weak to hold it without spilling. Wait.</p>
+
+      <p>“Better?” A barely perceptible nod.</p>
+
+      <p>Sit back down. Find the sentence I’d lost. Repeat.</p>
+    </div>
+
+    <p>The hospital had its own soundtrack. The heart monitor counted each beat with mechanical precision. The nebulizer exhaled in slow, steady breaths from the corner of the room. IV pumps chimed every so often, prompting nurses to drift in and out with practiced efficiency. Somewhere down the hallway, someone laughed before the sound disappeared beneath the squeak of rubber soles against polished floors. The fluorescent lights hummed overhead, washing everything in the same pale glow until afternoon and midnight became indistinguishable.</p>
+
+    <p class="standalone">Time worked differently there.</p>
+
+    <p>Outside, people went to work, picked up groceries, worried about traffic, and complained about the weather. Inside that room, time stretched itself between coughs, blood pressure checks, medication rounds, and the rise and fall of my grandmother’s chest.</p>
+
+    <p>I kept forgetting what I had just studied. Not because biochemistry was difficult.</p>
+
+    <p>Because every cough snapped my attention back to her bed. Every rustle beneath the blankets made me wonder if she needed help sitting up. Every slight change in the rhythm of her breathing pulled my eyes away from equilibrium constants and reaction mechanisms.</p>
+
+    <p>For years, I had trained myself to ignore distractions while studying. This wasn’t a distraction.</p>
+
+    <p class="standalone">It was exactly where my attention belonged.</p>
+
+    <p>My grandmother hadn’t slept well in years. Every position seemed to hurt. She would shift onto one side, wince, then slowly turn back again, searching for a place where her body would stop reminding her it was sick. When she finally drifted into a deep sleep, I realized I hadn’t turned a page in nearly twenty minutes. I found myself watching her instead of reading, relieved by something as ordinary as the sound of her snoring.</p>
+
+    <p>She couldn’t really talk that day. Every word came out as a whisper, and even whispering seemed to leave her breathless. She didn’t have to say anything. The silence said enough.</p>
+
+    <p>This hospitalization felt different from the five before it.</p>
+
+    <p>Cancer had entered our lives during my freshman year of college. Since then, every milestone had carried the same quiet question that no one in my family ever voiced aloud.</p>
+
+    <blockquote>
+      <p>Will she still be here for the next one?</p>
+    </blockquote>
+
+    <p>At my college graduation, she cried. I smiled, squeezed her hand, and laughed softly. “Oh, Grandma.” I assumed she was crying for the same reason every parent and grandparent cries at graduations. Later that evening, after everyone had gone home, my mother quietly told me the truth. “She cried because she didn’t think she’d live long enough to see you graduate.”</p>
+
+    <p>The memory changed. I wasn’t remembering tears anymore. I was remembering borrowed time.</p>
+
+    <p>Sitting beside her hospital bed months later, watching the heart monitor trace each borrowed heartbeat across the screen, I realized every interruption to my studying was another reminder that I still had the privilege of being interrupted. So I closed the book again. Stood up again. Helped her again. The timer never came back on.</p>
+
+    <div class="divider" aria-hidden="true">
+      <span>◆</span>
+    </div>
+
+    <p>The irony of studying medicine while sitting beside someone I loved as she became a patient wasn’t lost on me.</p>
+
+    <p>When the physician explained that her low sodium was contributing to her confusion and weakness, I nodded almost instinctively. I understood every explanation. I could trace the RAAS pathway from memory, explain the physiology behind her symptoms, and predict why correcting her sodium too quickly could be dangerous. My classes had taught me to see disease as mechanisms, pathways, and feedback loops.</p>
+
+    <p>But they had never taught me what those mechanisms looked like in someone you love.</p>
+
+    <p>For as long as I could remember, hard work had always been the answer. If I struggled in biochemistry, I solved more practice questions. If I didn’t understand a concept, I stayed after class or went to office hours. Every obstacle felt temporary because effort eventually led to progress.</p>
+
+    <p>But no amount of studying could help my grandmother breathe more comfortably.</p>
+
+    <p class="standalone">That helplessness was unfamiliar.</p>
+
+    <p>My practice scores suddenly felt much smaller than they had the day before. They still mattered—I still wanted to become a physician—but they no longer felt like the measure of whether I was moving closer to that goal. Sitting beside my grandmother, I realized medicine was more than understanding why someone was suffering. It was choosing to remain present while they were.</p>
+
+    <p>That day wasn’t the first time my grandmother had taught me what caring for someone looked like.</p>
+
+    <p>She is deaf. Long before I understood words like accessibility or patient-centered care, I understood that conversations with her worked differently. She navigated the world by reading lips. As I grew taller, I noticed she had to crane her neck to see me, her eyes searching my face before I had even finished my first sentence.</p>
+
+    <p>So I changed. Even in heels, she barely reached five feet. By high school, my gangly 5’9” frame towered over her, and without thinking, I would crouch beside her or bend at the knees until we were eye level before speaking. At first, I did it because it was the only way she could understand me. Later, it became habit. It was my quiet way of telling her that she didn’t have to work harder just to be included in the conversation.</p>
+
+    <p>It also usually earned me an extra helping of mohinga or whatever Burmese snack she had waiting after school.</p>
+
+    <p>Years later, while volunteering with patients, I noticed myself doing the same thing. Without thinking, I pulled up a chair instead of standing over the bed. I knelt beside wheelchairs. I crouched beside stretchers. Before asking a question or introducing myself, I made sure we were looking at each other instead of talking down at one another.</p>
+
+    <p>No one had taught me to do that. I had learned it in my grandmother’s kitchen. Watching her navigate a world that wasn’t built for her taught me that small adjustments can transform the way someone experiences care. A conversation becomes less rushed. A patient feels less intimidated. Eye contact lasts a little longer. Trust forms a little more easily.</p>
+
+    <p>Those moments in the hospital reminded me that medicine is built just as much from those small choices as it is from scientific knowledge.</p>
+
+    <blockquote>
+      <p>The science explains why a disease happens. Compassion determines how a patient experiences it.</p>
+    </blockquote>
+
+    <p>That afternoon, I still couldn’t lower my grandmother’s sodium level or take away her pain. I couldn’t stop her coughing or make the nausea disappear. But I could help her sit up before she asked. I could hold her cup when her hands shook. I could straighten the blankets, adjust her oxygen cannula without pulling her hair, lean down so she could see my face, and stay beside her until her breathing slowed.</p>
+
+    <p>For the first time, I understood that caring for a patient isn’t measured only by the treatments you provide. Sometimes it’s measured by whether someone feels less alone while receiving them.</p>
+
+    <p>By the end of the day, I had memorized another biochemical pathway.</p>
+
+    <p>I had also learned that my grandmother preferred to sleep on her left side, that adjusting her oxygen cannula was easier if I tucked her hair behind her ears first, and that she would always try to open her applesauce or water bottle herself before quietly handing it to me with the same stubborn determination she had carried her entire life. Without a word, I’d twist the cap loose or peel back the foil lid and hand it back.</p>
+
+    <p>I don’t remember how many practice passages I finished that afternoon. I remember that she finally slept.</p>
+
+    <p>The room was quieter then. The heart monitor continued its steady cadence. The nebulizer hummed softly in the corner. For the first time all day, her breathing settled into a slow, even rhythm. I watched her chest rise and fall, resisting the urge to turn another page in my Kaplan book. There would always be more equations to memorize, more pathways to review, more practice exams to take.</p>
+
+    <p class="standalone">There wouldn’t always be moments like this.</p>
+
+    <p>As I packed my books that evening, I realized I hadn’t spent the day falling behind in my preparation for medicine. I had spent the day seeing it from the other side.</p>
+
+    <p>Not from the physician’s perspective, but from the bedside—where families measure time between physician updates, where hope rises and falls with each lab result, and where the smallest acts of kindness often become the moments patients remember most.</p>
+
+    <p>Since then, I’ve noticed myself returning to that hospital room whenever I meet a patient. Before asking a question, I pull up a chair instead of standing over the bed. Before speaking, I make eye contact. I slow down. I remember what it felt like to sit in the family chair instead of the clinician’s.</p>
+
+    <p>Before thinking about diagnoses or lab values, I remind myself that the person sitting in front of me is living a story much larger than the few minutes we share together.</p>
+
+    <p>The science that once felt like the destination has become the language I hope to use in service of something greater.</p>
+
+    <p>Years from now, I’ll almost certainly forget the equation relating K<sub>eq</sub> and ΔG. I’ll forget my MCAT score. I’ll probably forget countless details from the textbooks that now sit dog-eared on my desk.</p>
+
+    <p class="standalone">But I will never forget the rhythm of that hospital room.</p>
+
+    <div class="rhythm">
+      <p>Close the book.</p>
+      <p>Stand up.</p>
+      <p>Lean down so she could see my face.</p>
+      <p>Help her.</p>
+      <p>Wait until she was comfortable.</p>
+      <p>Sit back down.</p>
+      <p>Repeat.</p>
+    </div>
+
+    <div class="ending">
+      <p>Looking back, that rhythm had been shaping me long before I knew I wanted to become a physician. It began in my grandmother’s kitchen, where I learned to kneel so she could understand me. It continued beside her hospital bed, where I learned that sometimes the most meaningful care isn’t a treatment or a diagnosis—it’s choosing to remain present.</p>
+
+      <p>Medicine will ask me to master its science. My grandmother taught me why that science matters.</p>
+    </div>
+
+  </article>
+
+  <a href="lingerings.html" class="back-link">← back to lingerings</a>
+
+</body>
+</html>
