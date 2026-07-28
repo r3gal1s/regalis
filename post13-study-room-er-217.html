@@ -98,6 +98,24 @@
       font-size: 0.91rem;
       line-height: 1.65;
     }
+    .music-player{
+  max-width:520px;
+  margin:2.5rem auto 4rem;
+}
+
+.music-label{
+  margin:0 0 .8rem;
+  text-align:center;
+
+  color:var(--muted);
+
+  font-family:"DM Sans", sans-serif;
+  font-size:.72rem;
+  font-weight:500;
+
+  letter-spacing:.22em;
+  text-transform:uppercase;
+}
 
     article {
       padding: clamp(1.5rem, 5vw, 4rem);
@@ -258,7 +276,23 @@
       On borrowed time, bedside care, and studying medicine from the family chair.
     </p>
   </header>
+<div class="music-player">
+  <p class="music-label">Reading with</p>
 
+  <iframe
+    data-testid="embed-iframe"
+    style="border-radius:12px"
+    src="https://open.spotify.com/embed/track/5ZYAufbhkzyhLxk0u2uLqj?utm_source=generator&si=435d15bfbe6547e7"
+    width="100%"
+    height="152"
+    frameborder="0"
+    allowfullscreen=""
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy">
+  </iframe>
+</div>
+
+<article>
   <article>
 
     <p>I was studying for the MCAT in my grandmother’s hospital room during her second emergency room visit that month and her sixth that year when a thought crossed my mind.</p>
