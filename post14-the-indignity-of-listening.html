@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="An essay on misogyny, male entitlement, and whose authority patients choose to recognize.">
+  <meta name="theme-color" content="#121212">
+
   <title>Sir, Have Some Fucking Dignity. — regalis</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,15 +15,21 @@
 
   <style>
     :root {
-      --background: #fdfcfb;
-      --paper: #ffffff;
-      --text: #302c2a;
-      --muted: #8a817b;
-      --accent: #87534b;
-      --line: #e8dfda;
+      --background: #121212;
+      --paper: #1c1c1c;
+      --text: #eeeeeb;
+      --muted: #a1a1a1;
+      --accent: #d0d0d0;
+      --line: #454545;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -31,6 +39,12 @@
       font-family: "Newsreader", Georgia, serif;
       font-size: 1.18rem;
       line-height: 1.85;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+      background: #888888;
+      color: #ffffff;
     }
 
     .container {
@@ -38,21 +52,26 @@
       margin: 0 auto;
     }
 
+    /* NAVIGATION */
+
     .back-link {
       display: inline-block;
       margin-bottom: 4.5rem;
       color: var(--muted);
       font: 0.82rem "DM Sans", sans-serif;
       text-decoration: none;
+      transition: color 0.2s ease;
     }
 
     .back-link:hover {
-      color: var(--accent);
+      color: #ffffff;
     }
+
+    /* ARTICLE HEADER */
 
     header {
       text-align: center;
-      margin-bottom: 4rem;
+      margin-bottom: 3rem;
     }
 
     .category {
@@ -70,12 +89,13 @@
       line-height: 1.08;
       font-weight: 500;
       letter-spacing: -0.035em;
+      color: #f5f5f3;
     }
 
     .subtitle {
       max-width: 540px;
       margin: 0 auto 1.7rem;
-      color: #706761;
+      color: #bcbcbc;
       font-size: 1.22rem;
       font-style: italic;
       line-height: 1.5;
@@ -92,8 +112,37 @@
       width: 60px;
       height: 1px;
       margin: 3rem auto;
-      background: var(--accent);
+      background: #777777;
     }
+
+    /* SPOTIFY SOUNDTRACK */
+
+    .essay-soundtrack {
+      max-width: 560px;
+      margin: 0 auto 4.5rem;
+      text-align: center;
+    }
+
+    .soundtrack-label {
+      margin: 0 0 1rem;
+      color: #aaaaaa;
+      font-family: "DM Sans", sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+    }
+
+    .essay-soundtrack iframe {
+      display: block;
+      width: 100%;
+      height: 152px;
+      border: 0;
+      border-radius: 8px;
+      background: #242424;
+    }
+
+    /* ESSAY BODY */
 
     article p {
       margin: 0 0 1.65rem;
@@ -107,8 +156,8 @@
     .outburst {
       margin: 2.5rem 0;
       padding: 0.4rem 0 0.4rem 1.6rem;
-      border-left: 2px solid var(--accent);
-      color: #633e38;
+      border-left: 2px solid #b8b8b8;
+      color: #eeeeeb;
       font-size: 1.42rem;
       line-height: 1.55;
       font-weight: 500;
@@ -116,14 +165,14 @@
 
     .thought {
       margin: 2.1rem 0;
+      color: #d3d3d3;
       font-size: 1.4rem;
       font-style: italic;
-      color: #75534d;
     }
 
     .punchline {
       margin: 2.7rem 0;
-      color: var(--accent);
+      color: #e4e4e4;
       font-size: 1.45rem;
       font-weight: 500;
       line-height: 1.5;
@@ -132,7 +181,7 @@
     .section-break {
       margin: 3.5rem 0;
       text-align: center;
-      color: #a7958e;
+      color: #777777;
       font-size: 0.85rem;
       letter-spacing: 0.35em;
     }
@@ -142,7 +191,7 @@
       padding: 2rem 0;
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
-      color: #71453e;
+      color: #f0f0ed;
       font-size: clamp(1.7rem, 4vw, 2.2rem);
       font-weight: 500;
       line-height: 1.3;
@@ -153,6 +202,8 @@
       font-weight: 600;
     }
 
+    /* ENDING */
+
     .ending {
       margin-top: 3.8rem;
       padding-top: 2.5rem;
@@ -160,10 +211,12 @@
     }
 
     .ending p:last-child {
-      color: var(--accent);
+      color: #ffffff;
       font-size: 1.65rem;
       font-weight: 500;
     }
+
+    /* FOOTER */
 
     footer {
       margin-top: 5rem;
@@ -174,16 +227,37 @@
       font: 0.78rem "DM Sans", sans-serif;
     }
 
+    /* MOBILE */
+
     @media (max-width: 600px) {
       body {
         padding: 2.5rem 1.25rem;
         font-size: 1.12rem;
       }
-      .back-link { margin-bottom: 3rem; }
-      header { margin-bottom: 3rem; }
-      .outburst { font-size: 1.28rem; }
-      .opening { font-size: 1.25rem; }
-      .question { padding: 1.5rem 0; }
+
+      .back-link {
+        margin-bottom: 3rem;
+      }
+
+      header {
+        margin-bottom: 2.5rem;
+      }
+
+      .essay-soundtrack {
+        margin-bottom: 3.5rem;
+      }
+
+      .outburst {
+        font-size: 1.28rem;
+      }
+
+      .opening {
+        font-size: 1.25rem;
+      }
+
+      .question {
+        padding: 1.5rem 0;
+      }
     }
   </style>
 </head>
@@ -191,21 +265,53 @@
 <body>
 <div class="container">
 
-  <a href="legacy.html" class="back-link">← back to legacy</a>
+  <a href="legacy.html" class="back-link">
+    ← back to legacy
+  </a>
 
   <header>
     <div class="category">Legacy / Commentary</div>
+
     <h1>Sir, Have Some Fucking Dignity.</h1>
-    <p class="subtitle">On male entitlement, medical authority, and the extraordinary indignity of being told no by a woman.</p>
+
+    <p class="subtitle">
+      On male entitlement, medical authority, and the extraordinary indignity of being told no by a woman.
+    </p>
+
     <div class="date">November 12, 2026</div>
+
     <div class="rule"></div>
   </header>
 
+  <!-- SPOTIFY PLAYER -->
+
+  <div class="essay-soundtrack">
+    <p class="soundtrack-label">The Soundtrack</p>
+
+    <iframe
+      data-testid="embed-iframe"
+      src="https://open.spotify.com/embed/track/2tHdQjwO5zN86MLF7ZtU1X?utm_source=generator&theme=0"
+      width="100%"
+      height="152"
+      frameborder="0"
+      allowfullscreen
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"
+      title="Essay soundtrack on Spotify">
+    </iframe>
+  </div>
+
+  <!-- ESSAY -->
+
   <article>
 
-    <p class="opening">His eyes widened. His face turned crimson. The veins in his forehead bulged as he screamed at me from ten feet away.</p>
+    <p class="opening">
+      His eyes widened. His face turned crimson. The veins in his forehead bulged as he screamed at me from ten feet away.
+    </p>
 
-    <blockquote class="outburst">"DO NOT INTERFERE. I'M TALKING TO HIM, NOT YOU. HE'S THE MEDICAL ASSISTANT, NOT YOU."</blockquote>
+    <blockquote class="outburst">
+      "DO NOT INTERFERE. I'M TALKING TO HIM, NOT YOU. HE'S THE MEDICAL ASSISTANT, NOT YOU."
+    </blockquote>
 
     <p>I stared at him.</p>
 
@@ -287,7 +393,9 @@
 
     <p>Which raises a question I find considerably more interesting than one man's embarrassing behavior:</p>
 
-    <div class="question">How much of what medicine calls patient noncompliance is, in some cases, misogyny?</div>
+    <div class="question">
+      How much of what medicine calls patient noncompliance is, in some cases, misogyny?
+    </div>
 
     <p>How often does a female physician explain a treatment plan, only for her recommendation to become suddenly credible when a male colleague repeats it?</p>
 
@@ -323,7 +431,9 @@
 
   </article>
 
-  <footer>© 2026 regalis · couronne de lumière</footer>
+  <footer>
+    © 2026 regalis · couronne de lumière
+  </footer>
 
 </div>
 </body>
